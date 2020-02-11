@@ -47,8 +47,8 @@ class PairsTradingAlphaModel(AlphaModel):
         #2. Emit an Insight.Group() if the spread is less than the lowerthreshold
         if spread < lowerthreshold:
             return Insight.Group([
-                Insight.Price(self.pair[0].Symbol, self.Period, InsightDirection.Down),
-                Insight.Price(self.pair[1].Symbol, self.Period, InsightDirection.Up)
+                Insight.Price(self.pair[0].Symbol, self.period, InsightDirection.Down),
+                Insight.Price(self.pair[1].Symbol, self.period, InsightDirection.Up)
                 ])
         
         
